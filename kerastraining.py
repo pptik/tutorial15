@@ -1,6 +1,12 @@
 # 3. Import libraries and modules
 import numpy as np
 np.random.seed(123)  # for reproducibility
+
+import os
+os.environ['KERAS_BACKEND'] = 'theano'
+
+import keras.backend as K
+K.set_image_data_format("channels_first")
  
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten
